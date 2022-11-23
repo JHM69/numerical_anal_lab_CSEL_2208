@@ -26,7 +26,7 @@ def bysection(a, b, tol, N):
 
 def false_position(a, b, tol, N):
     print('\n\n*** False Position ***')
-    c = (a+b)/2
+    c = ( a * f(b) - b * f(a) ) / ( f(b) - f(a) )
     step = 1
     while abs(f(c)) > tol and step<=N:
         c = ( a * f(b) - b * f(a) ) / ( f(b) - f(a) )
